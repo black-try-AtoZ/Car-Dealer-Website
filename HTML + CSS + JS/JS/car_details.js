@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (targetSection) {
             targetSection.style.display = "block";
         }
-    }else {
+    } else {
         // If no car is selected, show a default car section
         document.getElementById("jaguar-e-type").style.display = "block"; // Default example
         document.getElementById("tesla-model-s").style.display = "block";

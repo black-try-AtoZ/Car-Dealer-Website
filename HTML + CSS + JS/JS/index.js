@@ -1,3 +1,4 @@
+//For the slideshow
 document.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll(".slides img");
     let currentSlide = 0;
@@ -13,5 +14,3 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(showSlide, 3000); // Change slide every 3 seconds
     showSlide(); // Show the first slide immediately
 });
-
-
