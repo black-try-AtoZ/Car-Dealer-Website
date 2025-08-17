@@ -106,7 +106,7 @@ section h2 {
 }
 
 .category-section {
-    display: none; /* Hide all sections by default */
+    display: block; 
 }
 
 #classic-cars {
