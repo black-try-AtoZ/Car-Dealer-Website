@@ -9,10 +9,10 @@
             <a href="https://instagram.com/" class="fa fa-instagram"></a>
         </div>
         <nav>
-            <a href="about-us.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="terms-and-condition.html">Terms & Conditions</a>
-            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="about-us.php">About Us</a>
+            <a href="contact-us.php">Contact Us</a>
+            <a href="terms-and-condition.php">Terms & Conditions</a>
+            <a href="privacy-policy.php">Privacy Policy</a>
         </nav>
         <p><span><strong>&copy;</strong></span> 2025 Yonas Car Dealer. All rights reserved.</p>
     </footer>

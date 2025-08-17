@@ -1,4 +1,5 @@
 <?php
+$page_title = 'Privacy Policy';
 $page_css = 'privacy-policy.css';
 include 'includes/header.php';
 ?>

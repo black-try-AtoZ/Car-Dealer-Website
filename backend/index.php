@@ -1,4 +1,5 @@
 <?php 
+$page_title = 'Home';
 $page_css = 'index-style.css';
 include 'includes/header.php';
 ?>
@@ -41,7 +42,7 @@ include 'includes/header.php';
             <div class="explore-btn">
                 <h2>Explore Our Collection</h2>
                 <p>Discover a wide range of vehicles that suit your needs and budget.</p>
-                <a href="car-explore.html"><button>Explore</button></a>
+                <a href="car-explore.php"><button>Explore</button></a>
             </div>
         </div>
     </section>
@@ -66,21 +67,21 @@ include 'includes/header.php';
         <h2>Our Products</h2>
         <div class="card-container">
             <section id="classic-cars" class="card">
-                <a href="car-explore.html?card=classic-cars">
+                <a href="car-explore.php?card=classic-cars">
                     <img src="assets/images/ford-mustang.jpg" alt="Classic Cars">
                     <span>Classic Cars</span>
                 </a>
             </section>
 
             <section id="electric-cars" class="card">
-                <a href="car-explore.html?card=electric-cars">
+                <a href="car-explore.php?card=electric-cars">
                     <img src="assets/images/bmw-ix3.jpg" alt="Electric Cars">
                     <span>Electric Cars</span>
                 </a>
             </section>
 
             <section id="luxury-cars" class="card">
-                <a href="car-explore.html?card=luxury-cars">
+                <a href="car-explore.php?card=luxury-cars">
                     <img src="assets/images/bentley-continental.jpg" alt="Luxury Cars">
                     <span>Luxury Cars</span>
                 </a>
@@ -89,21 +90,21 @@ include 'includes/header.php';
 
         <div class="card-container">
             <section id="exotic-cars" class="card">
-                <a href="car-explore.html?card=exotic-cars">
+                <a href="car-explore.php?card=exotic-cars">
                     <img src="assets/images/aston-martin-vanquish.jpg" alt="Exotic Cars">
                     <span>Exotic Cars</span>
                 </a>
             </section>
 
             <section id="trucks" class="card">
-                <a href="car-explore.html?card=trucks">
+                <a href="car-explore.php?card=trucks">
                     <img src="assets/images/ford-f150.jpg" alt="Truck">
                     <span>Truck</span>
                 </a>
             </section>
 
             <section id="suvs" class="card">
-                <a href="car-explore.html?card=suvs">
+                <a href="car-explore.php?card=suvs">
                     <img src="assets/images/dacia-bigster.jpg" alt="SUV">
                     <span>SUV</span>
                 </a>

@@ -1,4 +1,5 @@
-<php
+<?php
+$page_title = 'Terms and Conditions';
 $page_css = 'terms-and-condition.css';
 include 'includes/header.php';
 ?>

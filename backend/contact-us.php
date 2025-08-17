@@ -1,6 +1,7 @@
-<php
+<?php 
+$page_title = 'Contact Us';
 $page_css = 'contact-us.css';
-include 'includes/header.php'; 
+include 'includes/header.php';
 ?>
 
     <!-- Contact Form Section -->

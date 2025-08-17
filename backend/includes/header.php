@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <?php
+        if (isset($page_title)) {
+            echo "<title>$page_title</title>";
+        }
+    ?>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
@@ -20,12 +24,12 @@
             <img src="assets/images/logo.png" alt="Yonas Car Dealer Logo">
         </div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="car-explore.html">Explore Vehicles</a>
-            <a href="car-details.html">Car Details</a>
-            <a href="about-us.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="services.html">Services</a>
-            <a href="resources.html">Resources</a>
+            <a href="index.php">Home</a>
+            <a href="car-explore.php">Explore Vehicles</a>
+            <a href="car-details.php">Car Details</a>
+            <a href="about-us.php">About Us</a>
+            <a href="contact-us.php">Contact Us</a>
+            <a href="services.php">Services</a>
+            <a href="resources.php">Resources</a>
         </nav>
     </header>

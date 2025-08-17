@@ -1,4 +1,5 @@
-<php
+<?php
+$page_title = 'Resources';
 $page_css = 'resources.css';
 include 'includes/header.php';
 ?>

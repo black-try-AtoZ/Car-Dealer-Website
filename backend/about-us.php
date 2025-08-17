@@ -1,4 +1,5 @@
 <?php 
+$page_title = 'About Us';
 $page_css = 'about-us.css';
 include 'includes/header.php';
 ?>
