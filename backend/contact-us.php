@@ -1,31 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/contact.css">
-</head>
-<body>
-
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <img src="assets/images/logo.png" alt="Company Logo">
-        </div>
-        <nav class="navigation">
-            <a href="index.html">Home</a>
-            <a href="car-explore.html">Explore Vehicles</a>
-            <a href="car-details.html">Car Details</a>
-            <a href="about-us.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="services.html">Services</a>
-            <a href="resources.html">Resources</a>
-        </nav>
-    </header>
+<php
+$page_css = 'contact-us.css';
+include 'includes/header.php'; 
+?>
 
     <!-- Contact Form Section -->
     <section class="contact-form">
@@ -85,29 +61,7 @@
         </map>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="logo">
-            <img src="assets/images/logo.png" alt="Company Logo">
-        </div>
-        <div class="social-icons">
-            <a href="https://twitter.com/" class="fa fa-twitter"></a>
-            <a href="https://facebook.com/" class="fa fa-facebook"></a>
-            <a href="https://linkedin.com/" class="fa fa-linkedin"></a>
-            <a href="https://instagram.com/" class="fa fa-instagram"></a>
-        </div>
-        <nav class="footer-links">
-            <a href="about-us.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="terms-and-condition.html">Terms & Conditions</a>
-            <a href="privacy-policy.html">Privacy Policy</a>
-        </nav>
-        <p>&copy; 2025 Yonas Car Dealer. All rights reserved.</p>
-    </footer>
-
-    <button id="scrollUpBtn">▲</button>
-
-    <script src="assets/js/scrollUpBtn.js"></script>
-    <script src="assets/js/contact.js"></script>
-</body>
-</html>
+<?php
+$page_js = 'contact-us.js';
+include 'includes/footer.php';
+?>
