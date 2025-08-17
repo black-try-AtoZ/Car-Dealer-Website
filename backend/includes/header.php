@@ -8,7 +8,11 @@
     <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     <link rel="stylesheet" href="assets/css/styles.css">
-    
+    <?php
+        if (isset($page_css)) {
+            echo '<link rel="stylesheet" href="assets/css/' . $page_css . '">';
+        }
+    ?>
 </head>
 <body>
     <header>

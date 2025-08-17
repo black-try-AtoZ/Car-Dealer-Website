@@ -20,6 +20,10 @@
     <button id="scrollUpBtn">▲</button>
 
     <script src="assets/js/scrollUpBtn.js"></script>
-    <script src="assets/js/index.js"></script>
+    <?php
+        if (isset($page_js)) {
+            echo '<script src="assets/js/' . $page_js . '"></script>';
+        }
+    ?>
 </body>
 </html>
