@@ -1,0 +1,192 @@
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background: rgba(240, 240, 240, 0.95); /* Soft gray for a light, modern look */
+    z-index: 1000;
+    font-family: 'Playfair Display', serif; /* Elegant & strong */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333; /* Dark gray for readability */
+    text-decoration: none;
+    padding: 5px 8px;
+    border-radius: 4px; /* Subtle rounded corners */
+    transition: all 0.1s ease-in-out;
+}
+
+nav a:hover {
+    color: #fff;
+    background: #4d4c4c; /* Mid-gray for hover effect */
+    transform: scale(1.1); /* Smooth hover animation */
+}
+
+nav a:active {
+    background: #da8d4f; /* Highlight color for active link */
+    color: white;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: #f0f0f0; /* Light gray for a subtle contrast */
+    text-align: center;
+}
+
+footer p {
+    font-weight: bold; /* Makes the entire copyright text bold */
+}
+
+footer p span{
+    font-size: 20px; /* Larger font size for emphasis */
+}
+
+.social-icons {
+    margin-bottom: 20px; /* Adjust space between icons and the next element */
+}
+
+.social-icons a {
+    font-size: 18px;
+    text-align: center;
+    width: 35px; /* Fixed width for consistency */
+    height: 35px; /* Fixed height */
+    line-height: 35px; /* Center align icons */
+    border-radius: 50%; /* Circular icons */
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    margin: 0 10px; /* Adds horizontal spacing between icons */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Twitter (Blue) */
+.social-icons a.fa-twitter {
+    background: #1DA1F2;
+    color: white;
+}
+
+/* Facebook (Blue with White) */
+.social-icons a.fa-facebook {
+    background: #1877F2;
+    color: white;
+}
+
+/* LinkedIn (Blue) */
+.social-icons a.fa-linkedin {
+    background: #0A66C2;
+    color: white;
+}
+
+/* Instagram (Gradient Look) */
+.social-icons a.fa-instagram {
+    background: linear-gradient(45deg, #FEDA75, #FA7E1E, #D62976, #962FBF);
+    color: white;
+}
+
+/* Hover Effect */
+.social-icons a:hover {
+    opacity: 0.9; /* Slight fade effect on hover */
+    transform: scale(1.25);
+}
+
+#scrollUpBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: #003780;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Hide by default */
+    transition: opacity 0.3s ease-in-out;
+}
+
+#scrollUpBtn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Mobile View */
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .social-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social-icons a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
+/* Tablet View */
+@media screen and (max-width: 900px) {
+    header {
+        font-size: 18px;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .social-icons a {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
