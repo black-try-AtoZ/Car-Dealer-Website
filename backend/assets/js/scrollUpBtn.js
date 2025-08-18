@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Show button only when scrolling down
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
+        if (window.scrollY > 500) {
             scrollBtn.style.display = "block";
         } else {
             scrollBtn.style.display = "none";
