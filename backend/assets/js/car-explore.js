@@ -1,15 +1,42 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("featured-vehicles").style.display = "block"; // Show the featured vehicles section by default
+    // --- Logic for handling URL parameter from homepage ---
+
+    const params = new URLSearchParams(window.location.search);
+    const selectedCard = params.get("card");
+    const allSections = document.querySelectorAll("#featured-vehicles > section");
+
+    // ONLY hide sections if a specific card was selected from the homepage
+    if (selectedCard) {
+        // Hide all sections initially
+        allSections.forEach(section => {
+            section.style.display = "none";
+        });
+
+        // Show the selected category section if it exists
+        const targetSection = document.getElementById(selectedCard);
+        if (targetSection) {
+            targetSection.style.display = "block";
+        }
+    } else {
+        // --- Default view for direct navigation ---
+        // If no card is specified in URL, show the default "featured" section.
+        // This assumes #featured-vehicles is the container for all car sections.
+        // Your CSS already makes #classic-cars visible by default, which is good.
+        // If you want all to be visible, you could loop and show them here.
+        document.getElementById("featured-vehicles").style.display = "block";
+    }
+
+    // --- Logic for the category filter dropdown ---
 
     const categoryDropdown = document.getElementById("category");
-    const allSections = document.querySelectorAll("section[id]");
+    const allCategorySections = document.querySelectorAll("section[id]"); // Select all sections with an ID for filtering
 
     categoryDropdown.addEventListener("change", function () {
         const selectedValue = this.value;
 
-        // If the selected value is empty or just "#", do nothing
+        // If "All Categories" is selected, show all sections
         if (selectedValue === "#") {
-            allSections.forEach(section => {
+            allCategorySections.forEach(section => {
                 section.style.display = "block";
             });
             return;
@@ -18,38 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const selectedCategory = selectedValue.substring(1); // Remove '#'
 
         // Hide all sections
-        allSections.forEach(section => {
-            section.style.display = "none";
+        allCategorySections.forEach(section => {
+            section.style.display = "block";
         });
 
-        // Show the selected category section
+        // Show only the selected category section
         const targetSection = document.getElementById(selectedCategory);
         if (targetSection) {
             targetSection.style.display = "block";
         }
     });
-});
-
-
-
-// For showing and hidding cards selected from home page
-document.addEventListener("DOMContentLoaded", function () {
-    const params = new URLSearchParams(window.location.search);
-    const selectedCard = params.get("card");
-    
-    // Get all sections inside #featured-vehicles EXCEPT trucks and SUVs
-    const allSections = document.querySelectorAll("#featured-vehicles > section");
-
-    // Hide all sections initially
-    allSections.forEach(section => {
-        section.style.display = "none";
-    });
-
-    // Show the selected category section if it exists
-    if (selectedCard) {
-        const targetSection = document.getElementById(selectedCard);
-        if (targetSection) {
-            targetSection.style.display = "block";
-        }
-    }
 });
