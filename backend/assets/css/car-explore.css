@@ -1,152 +1,266 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+/* ===== Global & Root Variables ===== */
+:root {
+    --primary-color: #2372d8;
+    --primary-color-dark: #1b5cb0;
+    --dark-blue: #003780;
+    --light-gray: #f4f4f4;
+    --medium-gray: #e2e8f0;
+    --text-color: #333;
+    --white-color: #ffffff;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --focus-shadow: 0 0 0 3px rgba(35, 114, 216, 0.15);
 }
 
-/* Hero Section */
+/* ===== General Body Styles ===== */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ===== Hero Section ===== */
 .hero {
     text-align: center;
     padding: 50px 20px;
-    background-color: #003780;
-    color: white;
+    background-color: var(--dark-blue);
+    color: var(--white-color);
 }
 
 .hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-/* Filter Dropdown */
+/* ===== Filter Bar ===== */
 .filter {
-    margin-top: 15px;
-}
-
-.filter label {
-    font-size: 18px;
-}
-
-.filter select {
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-/* Vehicle Sections */
-section {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-section h2 {
-    font-size: 28px;
-    color: #008080;
-    border-bottom: 2px solid #008080;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-/* Vehicle List Grid */
-.vehicle-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    background: var(--white-color);
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 12px;
     max-width: 1200px;
-    margin: auto;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-/* Individual Vehicle Card */
-.vehicle {
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-    width: 280px;
+.filter-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+    align-items: end;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: 600;
+    color: var(--dark-blue);
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+}
+
+.field select,
+.field input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #cfd8ea;
+    background: #fdfdff;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    appearance: none;
+}
+
+.field select:focus,
+.field input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: var(--focus-shadow);
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-top: 24px; /* Align with labels */
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    cursor: pointer;
     text-align: center;
-    transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.btn.primary {
+    background: var(--primary-color);
+    color: var(--white-color);
+    border-color: var(--primary-color);
+}
+
+.btn.primary:hover {
+    background: var(--primary-color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(27, 92, 176, 0.25);
+}
+
+.btn.ghost {
+    background: #f1f5f9;
+    color: #0f172a;
+    border-color: var(--medium-gray);
+}
+
+.btn.ghost:hover {
+    background: var(--medium-gray);
+}
+
+/* ===== Vehicle Grid ===== */
+.vehicle-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.vehicle {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden; /* Ensures child elements respect border radius */
+}
+
+.vehicle:hover {
+    transform: translateY(-8px);
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
 
 .vehicle img {
     width: 100%;
-    height: 250px;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    height: 220px;
+    object-fit: cover;
 }
 
-.vehicle p {
-    font-size: 16px;
-    margin: 10px 0;
+.vehicle-info {
+    padding: 20px;
+}
+
+.vehicle-info h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.vehicle-info p {
+    font-size: 1rem;
+    margin: 5px 0;
     font-weight: bold;
+    color: var(--text-color);
+    line-height: 1.4;
+    text-align: center;
 }
 
-/* View Details Button */
 .vehicle a button {
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #2372d8;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--light-gray);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .vehicle a button:hover {
-    background-color: #006666;
+    color: var(--white-color);
+    background-color: var(--primary-color-dark);
 }
 
-/* Hover Effect on Vehicle Cards */
-.vehicle:hover {
-    transform: scale(1.05);
+.vehicle a {
+    text-decoration: none;
+    color: var(--primary-color-dark);
 }
 
-.category-section {
-    display: block; 
+/* ===== Pagination ===== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
-#classic-cars {
-    display: block; /* Ensure default category is visible */
+.page-link {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 1px solid #cfd8ea;
+    background: var(--white-color);
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    min-width: 44px;
+    text-align: center;
+    transition: all 0.2s ease;
 }
 
-.filter select {
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.page-link:hover {
+    background: #f1f5f9;
+    border-color: var(--primary-color);
 }
 
-/* Mobile View */
-@media screen and (max-width: 600px) {
-    .vehicle-list {
+.page-link.active {
+    background: var(--primary-color);
+    color: var(--white-color);
+    border-color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .filter-form {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .actions {
+        grid-column: 1 / -1; /* Span full width */
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
 
-    .vehicle {
-        width: 90%;
-    }
-
-    .hero h1 {
-        font-size: 28px;
+    .btn {
+        width: 100%;
     }
 }
 
-/* Tablet View */
-@media screen and (max-width: 900px) {
+@media (max-width: 480px) {
+    .filter-form {
+        grid-template-columns: 1fr;
+    }
+    
     .vehicle-list {
-        flex-wrap: wrap;
-    }
-
-    .vehicle {
-        width: 45%;
-    }
-
-    .hero h1 {
-        font-size: 32px;
+        padding: 0 15px;
     }
 }
