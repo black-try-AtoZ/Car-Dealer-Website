@@ -14,7 +14,7 @@
             <a href="terms-and-condition.php">Terms & Conditions</a>
             <a href="privacy-policy.php">Privacy Policy</a>
         </nav>
-        <p><span><strong>&copy;</strong></span> 2025 Yonas Car Dealer. All rights reserved.</p>
+        <p><span><strong>&copy;</strong></span> <?= date('Y') ?> Yonas Car Dealer. All rights reserved.</p>
     </footer>
     
     <button id="scrollUpBtn">▲</button>
