@@ -88,7 +88,7 @@
 
     <!-- Contact for Inquiry -->
     <div class="contact-button">
-        <a href="contact.php"><button>Contact for Inquiry</button></a>
+        <a href="contact-us.php"><button>Contact for Inquiry</button></a>
     </div>
 
     <!-- Recommended Classic Cars -->
